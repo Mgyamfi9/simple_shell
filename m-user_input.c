@@ -1,4 +1,4 @@
-#include "m-shell.h"
+#include "shell.h"
 /**
  * read_input - read user input
  * @input: user input
@@ -19,5 +19,5 @@ void read_input(char *input, size_t size)
 			exit(EXIT_FAILURE);
 		}
 	}
-	input[strcspn(command, "\n")] = '\0';
+	input[strcspn(input, "\n")] = '\0';
 }

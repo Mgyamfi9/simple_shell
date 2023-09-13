@@ -1,4 +1,4 @@
-#include "m-shell.h"
+#include "shell.h"
 /**
  * main - entry point of shell program
  * Return: 0 always success
@@ -11,7 +11,7 @@ int main(void)
 	{
 		_prompt();
 		read_input(input, sizeof(input));
-		execute_input(input);
+		_execute(input);
 	}
 	return (0);
 }
