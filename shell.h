@@ -10,6 +10,6 @@
 #include <sys/wait.h>
 void _write(const char *text);
 void _prompt(void);
-void _execute(const char *order);
+void _execute(const char *order, char *envp[]);
 void read_input(char *input, size_t size);
 #endif
