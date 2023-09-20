@@ -1,15 +1,19 @@
 #ifndef SHELL_H
 #define SHELL_H
 #include <stdlib.h>
-#include <stdio.h>
 #include <stdarg.h>
+#include <stdio.h>
 #include <string.h>
 #include <unistd.h>
 #include <stdbool.h>
-#include <sys/types.h>
 #include <sys/wait.h>
-void _write(const char *text);
-void _prompt(void);
-void _execute(const char *order, char *envp[]);
-void read_input(char *input, size_t size);
+#include <sys/types.h>
+#include <sys/stat.h>
+void _strtok(char **arr, char *str);
+void _prog2(int ac, char **av, char **envp);
+void _prog1(int ac, char **av, char **envp);
+void _free(char *string, struct stat *sbuf);
+void _execute(char **arguments, char **env);
+void array_int(char **arr, int str_size);
+void error(int ac, char *string, char **av);
 #endif
